@@ -1,0 +1,62 @@
+.App {
+  font-family: sans-serif;
+  text-align: center;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+  font-size: 14px;
+}
+.LineChart {
+  position: relative;
+  padding-left: 40px;
+  padding-bottom: 40px;
+}
+svg {
+  fill: none;
+  stroke: #33c7ff;
+  display: block;
+  stroke-width: 2px;
+  border-left: 1px solid black;
+  border-bottom: 1px solid black;
+}
+.x-axis {
+  position: absolute;
+  bottom: 0;
+  height: 40px;
+  left: 40px;
+  right: 0;
+  display: flex;
+  justify-content: space-between;
+}
+.y-axis {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 40px;
+  bottom: 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+.y-axis > div::after {
+  margin-right: 4px;
+  content: attr(data-value);
+  color: black;
+  display: inline-block;
+}
+.x-axis > div::after {
+  margin-top: 4px;
+  display: inline-block;
+  content: attr(data-value);
+  color: black;
+}
