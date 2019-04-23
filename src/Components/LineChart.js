@@ -6,6 +6,11 @@ class LineChart extends PureComponent {
   render() {
     const { data, width, height, tickCount } = this.props
 
+    const styles = {
+      width: width + 'px',
+      height: height + 'px'
+    }
+
     const MAX_X = Math.max(...data.map(d => d.x)),
       MAX_Y = Math.max(...data.map(d => d.y))
     logColor(`Max value of X=${MAX_X} & Y=${MAX_Y}`)
@@ -31,12 +36,7 @@ class LineChart extends PureComponent {
     logColor('Path result for "d" ', d)
 
     return (
-      <div
-        className="LineChart"
-        style={{
-          width: width + 'px',
-          height: height + 'px'
-        }}>
+      <div className="LineChart" style={styles}>
         <svg width={width} height={height}>
           <path d={d} key={`${Math.random()}`} />
         </svg>
