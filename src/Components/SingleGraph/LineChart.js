@@ -1,5 +1,5 @@
 import React, { PureComponent } from 'react'
-import { logColor } from '../Helpers/consoleLogStyle'
+import { logColor } from '../../Helpers/consoleLogStyle'
 import Axis from './Axis'
 
 class LineChart extends PureComponent {
