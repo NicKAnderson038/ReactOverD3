@@ -1,6 +1,6 @@
 import React from 'react'
 
-import { logColor } from '../Helpers/ConsoleLogStyle'
+import { logColor } from '../Helpers/consoleLogStyle'
 
 function getTicks(count, max) {
   return [...Array(count).keys()].map(d => {
