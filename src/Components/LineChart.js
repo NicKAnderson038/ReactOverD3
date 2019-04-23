@@ -1,5 +1,7 @@
 import React, { Component } from 'react'
 
+import { logColor } from '../Helpers/ConsoleLogStyle'
+
 function getTicks(count, max) {
   return [...Array(count).keys()].map(d => {
     return (max / (count - 1)) * parseInt(d)
@@ -12,12 +14,21 @@ class LineChart extends Component {
 
     const MAX_X = Math.max(...data.map(d => d.x)),
       MAX_Y = Math.max(...data.map(d => d.y))
+    logColor('Find the max X & Y value: ', MAX_X, MAX_Y)
 
+    /**
+     * Helper functions for line path calculations.
+     */
     const x = val => (val / MAX_X) * width,
-      y = val => height - (val / MAX_Y) * height,
-      x_ticks = getTicks(tickCount, MAX_X),
-      y_ticks = getTicks(tickCount, MAX_Y).reverse()
+      y = val => height - (val / MAX_Y) * height
 
+    const x_ticks = getTicks(tickCount, MAX_X),
+      y_ticks = getTicks(tickCount, MAX_Y).reverse()
+    logColor('Axis ticks values for X & Y: ', x_ticks, y_ticks)
+
+    /**
+     * line path constructor.
+     */
     const d = `
           M${x(data[0].x)} ${y(data[0].y)} 
           ${data
