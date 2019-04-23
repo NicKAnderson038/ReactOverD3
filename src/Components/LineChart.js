@@ -8,7 +8,7 @@ class LineChart extends PureComponent {
 
     const MAX_X = Math.max(...data.map(d => d.x)),
       MAX_Y = Math.max(...data.map(d => d.y))
-    logColor('Find the max X & Y value: ', MAX_X, MAX_Y)
+    logColor(`Max value of X=${MAX_X} & Y=${MAX_Y}`)
 
     /**
      * Helper functions for line path calculations.
