@@ -1,12 +1,6 @@
 import React, { Component } from 'react'
-
 import { logColor } from '../Helpers/ConsoleLogStyle'
-
-function getTicks(count, max) {
-  return [...Array(count).keys()].map(d => {
-    return (max / (count - 1)) * parseInt(d)
-  })
-}
+import Axis from './Axis'
 
 class LineChart extends Component {
   render() {
@@ -21,10 +15,6 @@ class LineChart extends Component {
      */
     const x = val => (val / MAX_X) * width,
       y = val => height - (val / MAX_Y) * height
-
-    const x_ticks = getTicks(tickCount, MAX_X),
-      y_ticks = getTicks(tickCount, MAX_Y).reverse()
-    logColor('Axis ticks values for X & Y: ', x_ticks, y_ticks)
 
     /**
      * line path constructor.
@@ -50,16 +40,18 @@ class LineChart extends Component {
         <svg width={width} height={height}>
           <path d={d} key={`${Math.random()}`} />
         </svg>
-        <div className="x-axis">
-          {x_ticks.map(v => (
-            <g data-value={v} key={`${Math.random() + v}`} />
-          ))}
-        </div>
-        <div className="y-axis">
-          {y_ticks.map(v => (
-            <g data-value={v} key={`${Math.random() + v}`} />
-          ))}
-        </div>
+        <Axis
+          classAxis={'x-axis'}
+          MAX_X={MAX_X}
+          MAX_Y={MAX_Y}
+          tickCount={tickCount}
+        />
+        <Axis
+          classAxis={'y-axis'}
+          MAX_X={MAX_X}
+          MAX_Y={MAX_Y}
+          tickCount={tickCount}
+        />
       </div>
     )
   }
