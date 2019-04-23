@@ -64,9 +64,6 @@
 }
 
 /* Multi Line Graph */
-.positioning {
-  transform: translate(50, 50);
-}
 .line {
   stroke-width: 2;
   fill: none;

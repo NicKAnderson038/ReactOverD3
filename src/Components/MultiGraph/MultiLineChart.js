@@ -187,7 +187,7 @@ class MultiLineChart extends PureComponent {
           height={height + margin}
           // transform={`translate(${margin}, ${margin})`}
           id="chart">
-          <g className="positioning" />
+          {/* <g className="positioning" /> */}
           {/* <g className="lines"/> */}
         </svg>
       </div>
