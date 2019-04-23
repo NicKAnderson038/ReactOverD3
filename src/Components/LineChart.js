@@ -30,7 +30,7 @@ class LineChart extends Component {
 
     return (
       <div
-        class="LineChart"
+        className="LineChart"
         style={{
           width: width + 'px',
           height: height + 'px'
@@ -38,14 +38,14 @@ class LineChart extends Component {
         <svg width={width} height={height}>
           <path d={d} />
         </svg>
-        <div class="x-axis">
+        <div className="x-axis">
           {x_ticks.map(v => (
-            <div data-value={v} />
+            <div data-value={v} key={`${v}-x-axis`} />
           ))}
         </div>
-        <div class="y-axis">
+        <div className="y-axis">
           {y_ticks.map(v => (
-            <div data-value={v} />
+            <div data-value={v} key={`${v}-y-axis`} />
           ))}
         </div>
       </div>
