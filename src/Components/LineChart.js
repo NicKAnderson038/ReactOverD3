@@ -1,8 +1,8 @@
-import React, { Component } from 'react'
+import React, { PureComponent } from 'react'
 import { logColor } from '../Helpers/ConsoleLogStyle'
 import Axis from './Axis'
 
-class LineChart extends Component {
+class LineChart extends PureComponent {
   render() {
     const { data, width, height, tickCount } = this.props
 
