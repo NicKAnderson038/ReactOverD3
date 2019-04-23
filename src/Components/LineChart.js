@@ -38,6 +38,7 @@ class LineChart extends Component {
             })
             .join(' ')}
         `
+    logColor('result for "d" ', d)
 
     return (
       <div
