@@ -180,7 +180,7 @@ class MultiLineChart extends PureComponent {
     logColor(margin)
     return (
       <div>
-        <h4 className="headers">Placeholder</h4>
+        <h4 className="headers">Multi Line Graph</h4>
         <svg
           className="MultiLineChart"
           width={width + margin}

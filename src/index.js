@@ -69,7 +69,7 @@ function App() {
   return (
     <div className="App">
       <br />
-      <h1 className="headers">Line Graph</h1>
+      <h1 className="headers">Single Line Graph</h1>
       <br />
       <br />
       <Suspense fallback={Loading}>
