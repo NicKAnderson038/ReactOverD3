@@ -48,13 +48,27 @@ svg {
   justify-content: space-between;
   align-items: flex-end;
 }
-.y-axis > div::after {
+/* .y-axis > div::after {
   margin-right: 4px;
   content: attr(data-value);
   color: black;
   display: inline-block;
 }
 .x-axis > div::after {
+  margin-top: 4px;
+  display: inline-block;
+  content: attr(data-value);
+  color: black;
+} */
+
+/* g element css */
+.y-axis > g::after {
+  margin-right: 4px;
+  content: attr(data-value);
+  color: black;
+  display: inline-block;
+}
+.x-axis > g::after {
   margin-top: 4px;
   display: inline-block;
   content: attr(data-value);

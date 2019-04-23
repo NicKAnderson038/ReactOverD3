@@ -40,12 +40,12 @@ class LineChart extends Component {
         </svg>
         <div className="x-axis">
           {x_ticks.map(v => (
-            <div data-value={v} key={`${Math.random() + v}`} />
+            <g data-value={v} key={`${Math.random() + v}`} />
           ))}
         </div>
         <div className="y-axis">
           {y_ticks.map(v => (
-            <div data-value={v} key={`${Math.random() + v}`} />
+            <g data-value={v} key={`${Math.random() + v}`} />
           ))}
         </div>
       </div>
