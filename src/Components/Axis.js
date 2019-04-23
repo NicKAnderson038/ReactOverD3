@@ -25,11 +25,11 @@ const axis = props => {
   logColor(`${classAxis} ticks value is ${ticks}`)
 
   return (
-    <svg className={classAxis}>
+    <div className={classAxis}>
       {ticks.map(v => (
         <g data-value={v} key={`${Math.random() + v}`} />
       ))}
-    </svg>
+    </div>
   )
 }
 

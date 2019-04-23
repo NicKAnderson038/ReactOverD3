@@ -40,7 +40,7 @@ class LineChart extends PureComponent {
 
     return (
       <div className="LineChart" style={styles}>
-        <svg width={width} height={height}>
+        <svg className="svg" width={width} height={height}>
           <path d={d} key={`${Math.random()}`} />
         </svg>
         <Axis
