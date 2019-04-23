@@ -17,7 +17,7 @@ class LineChart extends PureComponent {
       y = val => height - (val / MAX_Y) * height
 
     /**
-     * line path constructor.
+     * line path string builder.
      */
     const d = `
           M${x(data[0].x)} ${y(data[0].y)} 
