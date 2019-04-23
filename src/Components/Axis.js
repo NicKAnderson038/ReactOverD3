@@ -27,7 +27,7 @@ const axis = props => {
   return (
     <div className={classAxis}>
       {ticks.map(v => (
-        <g data-value={v} key={`${Math.random() + v}`} />
+        <div data-value={v} key={`${Math.random() + v}`} />
       ))}
     </div>
   )
