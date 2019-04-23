@@ -11,6 +11,9 @@ class LineChart extends PureComponent {
       height: height + 'px'
     }
 
+    /**
+     * Find the Max X & Max Y value for both axis.
+     */
     const MAX_X = Math.max(...data.map(d => d.x)),
       MAX_Y = Math.max(...data.map(d => d.y))
     logColor(`Max value of X=${MAX_X} & Y=${MAX_Y}`)
