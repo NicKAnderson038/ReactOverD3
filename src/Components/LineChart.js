@@ -28,7 +28,7 @@ class LineChart extends PureComponent {
             })
             .join(' ')}
         `
-    logColor('result for "d" ', d)
+    logColor('Path result for "d" ', d)
 
     return (
       <div
