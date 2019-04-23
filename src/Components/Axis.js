@@ -12,10 +12,15 @@ const axis = props => {
   const { classAxis, MAX_X, MAX_Y, tickCount } = props
 
   let ticks
-  if (classAxis.includes('x')) {
-    ticks = getTicks(tickCount, MAX_X)
-  } else if (classAxis.includes('y')) {
-    ticks = getTicks(tickCount, MAX_Y).reverse()
+  switch (classAxis) {
+    case 'x-axis':
+      ticks = getTicks(tickCount, MAX_X)
+      break
+    case 'y-axis':
+      ticks = getTicks(tickCount, MAX_Y).reverse()
+      break
+    default:
+      break
   }
   logColor(`${classAxis} ticks value is ${ticks}`)
 
