@@ -36,16 +36,16 @@ class LineChart extends Component {
           height: height + 'px'
         }}>
         <svg width={width} height={height}>
-          <path d={d} />
+          <path d={d} key={`${Math.random()}`} />
         </svg>
         <div className="x-axis">
           {x_ticks.map(v => (
-            <div data-value={v} key={`${v}-x-axis`} />
+            <div data-value={v} key={`${Math.random() + v}`} />
           ))}
         </div>
         <div className="y-axis">
           {y_ticks.map(v => (
-            <div data-value={v} key={`${v}-y-axis`} />
+            <div data-value={v} key={`${Math.random() + v}`} />
           ))}
         </div>
       </div>
