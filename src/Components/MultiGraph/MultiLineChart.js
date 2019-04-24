@@ -35,8 +35,7 @@ class MultiLineChart extends PureComponent {
         d.price = +d.price
       })
     })
-    console.log(JSON.stringify(data, null, 2))
-
+    logColor(data)
     /* Scale */
     const xScale = d3
       .scaleTime()
